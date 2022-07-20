@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Peta", sans-serif;
+  background-color: #20ac8e;
+  letter-spacing: -1px;
+}
+.logo {
+  font-family: "Niconne", cursive;
+}

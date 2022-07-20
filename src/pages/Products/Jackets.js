@@ -1,0 +1,29 @@
+import React from "react";
+import { products } from "../../data";
+import ProductContainer from "../../components/ProductContainer";
+import ProductItem from "../../components/ProductItem";
+import { Link } from "react-router-dom";
+
+const Jackets = () => {
+  return (
+    <>
+      <div className="hidden md:flex items-center justify-center space-x-10 font-semibold text-pink-600 mt-5">
+        <Link to={"/shop/hats"}>Hats</Link>
+        <Link to={"/shop/jackets"}>Jackets</Link>
+        <Link to={"/shop/sneakers"}>Sneakers</Link>
+        <Link to={"/shop/womens"}>Women</Link>
+        <Link to={"/shop/mens"}>Men</Link>
+      </div>
+      <div className=" md:hidden flex items-center justify-center space-x-10 font-semibold text-pink-600 mt-5">
+        <Link to={"/explore"}>All Kind</Link>
+      </div>
+      <ProductContainer>
+        {products.jackets.map((item) => {
+          return <ProductItem key={item.id} item={item} />;
+        })}
+      </ProductContainer>
+    </>
+  );
+};
+
+export default Jackets;
